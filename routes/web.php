@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(App\Http\Controllers\HomeController::class)->group(function () {
     Route::get('/', 'index')->name('home');
-    Route::get('/flush-redis', 'flushRedis')->name('flushRedis');
+    Route::post('/flush-redis', 'flushRedis')->name('flushRedis');
 });
 
 Route::controller(App\Http\Controllers\CrawlController::class)->group(function () {

@@ -57,13 +57,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     if Vagrant.has_plugin?('vagrant-notify-forwarder')
         config.notify_forwarder.enable = true
     end
-	
-	Vagrant.configure("2") do |config|
-	  config.vm.provider "virtualbox" do |vb|
-		vb.customize [ "modifyvm", :id, "--uartmode1", "file", File::NULL ]
-		vb.customize [ "modifyvm", :id, "--uart1", "0x3F8", "4" ]
-		vb.customize [ "modifyvm", :id, "--cableconnected1", "on" ]
-	  end
-	end
-	
 end

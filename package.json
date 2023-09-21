@@ -18,6 +18,8 @@
         "vue": "^3.2.37"
     },
     "dependencies": {
-        "jquery": "^3.7.1"
+        "jenesius-vue-modal": "^1.9.2",
+        "jquery": "^3.7.1",
+        "mdb-vue-ui-kit": "^4.0.0"
     }
 }
